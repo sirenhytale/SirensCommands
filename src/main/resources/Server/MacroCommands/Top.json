@@ -1,0 +1,7 @@
+{
+  "Name": "top",
+  "Commands": [
+    "tp top"
+  ],
+  "Description": "Teleports player to highest surface (runs tp top but shorter bindings)"
+}

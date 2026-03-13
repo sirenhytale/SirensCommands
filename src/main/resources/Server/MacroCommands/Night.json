@@ -1,0 +1,7 @@
+{
+  "Name": "night",
+  "Commands": [
+    "time set 21"
+  ],
+  "Description": "Makes the time of day 21>"
+}

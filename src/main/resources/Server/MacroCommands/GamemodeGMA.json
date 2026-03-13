@@ -1,0 +1,15 @@
+{
+  "Parameters": [
+    {
+      "Name": "player",
+      "Description": "The username to set into Adventure",
+      "Requirement": "Optional",
+      "ArgType": "String"
+    }
+  ],
+  "Name": "gma",
+  "Description": "Set a player to Adventure mode",
+  "Commands": [
+    "gamemode adventure {player}"
+  ]
+}

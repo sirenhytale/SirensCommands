@@ -1,0 +1,15 @@
+{
+  "Parameters": [
+    {
+      "Name": "player",
+      "Description": "The username to set into Creative",
+      "Requirement": "Optional",
+      "ArgType": "String"
+    }
+  ],
+  "Name": "gmc",
+  "Description": "Set a player to Creative mode",
+  "Commands": [
+    "gamemode creative {player}"
+  ]
+}

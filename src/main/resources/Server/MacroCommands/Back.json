@@ -1,0 +1,7 @@
+{
+  "Name": "back",
+  "Commands": [
+    "tp back"
+  ],
+  "Description": "Teleports player to there previous back (runs tp back but shorter bindings)"
+}

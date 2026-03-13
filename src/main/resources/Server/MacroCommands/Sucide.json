@@ -1,0 +1,10 @@
+{
+  "Name": "sucide",
+  "Description": "Kills the player (aliases to /kill)",
+  "Aliases": [
+    "die"
+  ],
+  "Commands": [
+    "kill"
+  ]
+}

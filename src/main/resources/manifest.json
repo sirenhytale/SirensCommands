@@ -1,0 +1,21 @@
+{
+  "Group": "Siren",
+  "Name": "Siren's Commands",
+  "Version": "1.0.2",
+  "Description": "More useful commands to make your life more simple, mainly used to make my life more Simple - Siren",
+  "Authors": [
+    {
+      "Name": "Siren",
+      "Url": "https://mermaids.dev/"
+    }
+  ],
+  "Website": "https://mermaids.dev/sirens-commands/",
+  "ServerVersion": "2026.02.19-1a311a592",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "DisabledByDefault": false,
+  "IncludesAssetPack": true,
+  "SubPlugins": [],
+  "Main": "plugin.siren.MermaidCommands"
+}
