@@ -2,14 +2,17 @@ package plugin.siren;
 
 import com.hypixel.hytale.event.EventRegistration;
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.HytaleServer;
 import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import plugin.siren.Commands.*;
 import plugin.siren.Events.PlayerReadyEventSC;
 import plugin.siren.Utils.HStats;
+import plugin.siren.Utils.UpdateChecker;
 
 import javax.annotation.Nonnull;
+import java.util.concurrent.TimeUnit;
 
 public class MermaidCommands extends JavaPlugin {
     private final static String VERSION = "1.0.2";
@@ -49,6 +52,21 @@ public class MermaidCommands extends JavaPlugin {
         LOGGER.atInfo().log("Successfully registered all commands.");
 
         LOGGER.atInfo().log("Version " + VERSION + " of Siren's Commands has successfully loaded.");
+
+        String recentVersion = UpdateChecker.checkForUpdate();
+        if(!VERSION.equalsIgnoreCase(recentVersion)){
+            LOGGER.atInfo().log("= =- -=- -=- -=- -=- -=- -=- -=- -= =");
+            String versionMessage = "The Siren's Commands Mod version is outdated, Siren's Commands has released v" + recentVersion +".";
+            LOGGER.atInfo().log(versionMessage);
+
+            Runnable updateCheckRunnable = new Runnable() {
+                @Override
+                public void run() {
+                    LOGGER.atInfo().log(versionMessage);
+                }
+            };
+            HytaleServer.SCHEDULED_EXECUTOR.schedule(updateCheckRunnable,15, TimeUnit.SECONDS);
+        }
         LOGGER.atInfo().log("===---==---==---==---==---==---==---==---==---==---===");
     }
 
